@@ -4,12 +4,6 @@ from unittest.mock import patch
 import pandas as pd
 from pandas.testing import assert_frame_equal
 
-#import os
-#cwd = os.getcwd()
-#print(cwd)
-
-#import sys
-#sys.path.append('../')
 import aquatech_bonus
 def args_based_return(t):
     if t == 1640991600:
