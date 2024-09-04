@@ -32,7 +32,7 @@ dans le dossier DB
 
 #### Main code:
 ```
-docker-compose bulid
+docker-compose build
 docker-compose up
 docker-compose down
 ```
