@@ -54,8 +54,8 @@ class TreeDictNode:
         self.data += data
 ```
 
-read_sensor_data function creates a node for each sensor
-add_data_from_records fills the nodes with data
+*read_sensor_data* function creates a node for each sensor
+*add_data_from_records* function fills the nodes with data
 
 That allows to easily see how much data went through children nodes and compare it to the papernt data to calculate the leaks.
 
