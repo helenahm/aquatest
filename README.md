@@ -14,8 +14,13 @@ output
 
 #### Tests:
 
-- python -m unittest aquatests.py
-- python -m unittest aquatests_bonus.py
+- aquatests.py
+- unittest aquatests_bonus.py
+- records.csv
+- sensors.csv
+- results.csv
+- results2.csv
+- results3.csv
 
 #### Deployment:
 Dockerfile 
