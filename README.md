@@ -55,7 +55,35 @@ class TreeDictNode:
 ```
 
 *read_sensor_data* function creates a node for each sensor
+```
+def read_sensor_data(path_to_data):
+    tree_dict = {}
+    with open(path_to_data, newline='') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',')
+        next(reader, None)  # skip the headers
+        for row in reader:
+            sensor_addr = row[0]
+            parent_addr = row[1]
+            if parent_addr is None or parent_addr == "":
+                tree_dict[sensor_addr] = TreeDictNode(None)
+            else:
+                tree_dict[sensor_addr] = TreeDictNode(parent_addr)
+                tree_dict[parent_addr].add_child(tree_dict[sensor_addr])
+    return tree_dict
+```
+
 *add_data_from_records* function fills the nodes with data
+```
+def add_data_from_records(tree_dict, path_to_records):
+    with open(path_to_records, newline='') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',')
+        next(reader, None)  # skip the headers
+        #timestamp,transmitter_addr,value
+        for row in reader:
+            transmitter_addr = row[1]
+            value = int(row[2])
+            tree_dict[transmitter_addr].add_data(value)
+```
 
 That allows to easily see how much data went through children nodes and compare it to the papernt data to calculate the leaks.
 
