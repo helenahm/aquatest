@@ -2,8 +2,6 @@ import csv
 import pandas as pd
 import numpy as np
 
-from datetime import datetime
-
 class TreeDictNode:
     def __init__(self, parent_name):
         self.parent_name = parent_name
@@ -37,7 +35,6 @@ def add_data_from_records(tree_dict, path_to_records):
         next(reader, None)  # skip the headers
         #timestamp,transmitter_addr,value
         for row in reader:
-            timestamp = row[0]
             transmitter_addr = row[1]
             value = int(row[2])
             tree_dict[transmitter_addr].add_data(value)
@@ -69,3 +66,5 @@ def run_calculations(path_to_sensors, path_to_records):
 
 df = run_calculations('./sensors.csv', './records.csv')
 df.to_csv('/tmp/maintask_results.csv', header = ['sensor_addr', 'totals', 'leaks'], index=False)
+df[['sensor_addr', 'leaks']].to_csv('/tmp/totals.csv', header = ['sensor_addr', 'leaks'], index=False)
+df[['sensor_addr', 'totals']].to_csv('/tmp/leaks.csv', header = ['sensor_addr', 'totals'], index=False)
