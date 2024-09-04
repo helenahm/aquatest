@@ -98,11 +98,28 @@ def add_data_from_records(tree_dict, path_to_records):
 
 That allows to easily see how much data went through children nodes and compare it to the parent data to calculate the leaks.
 
-To resolve bonus a *groupby by timestamp* allows to use the very same logic that is used for the main task. Like that the per day counts are calculated.
+To resolve bonus a **groupby by timestamp** allows to use the very same logic that is used for the main task. Like that the per day counts are calculated.
 
 ### Tests:
 
 Tests were done with **unittest** and **pandas.testing** using the data provided in the task description.
 
+```
+elena@x86_64-apple-darwin13 TestAqua % /opt/anaconda3/bin/python -m unittest aquatests_bonus.py
+
+INFO: Pandarallel will run on 4 workers.
+INFO: Pandarallel will use standard multiprocessing data transfer (pipe) to transfer data between the main process and workers.
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.140s
+
+OK
+elena@x86_64-apple-darwin13 TestAqua % /opt/anaconda3/bin/python -m unittest aquatests.py      
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+OK
+```
 
 
