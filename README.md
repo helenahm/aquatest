@@ -100,7 +100,7 @@ That allows to easily see how much data went through children nodes and compare 
 
 To resolve bonus a **groupby by timestamp** allows to use the very same logic that is used for the main task. Like that the per day counts are calculated.
 
-!(plot)[https://github.com/helenahm/aquatest/blob/master/leaks_per_day_plot.png]
+(plot)[https://github.com/helenahm/aquatest/blob/master/leaks_per_day_plot.png]
 
 ### Tests:
 
