@@ -1,0 +1,6 @@
+services:
+  pythonapp:
+    build: ./
+    command: bash -c "python3 ./aquatech_maintask.py && python3 ./aquatech_bonus.py"
+    volumes: 
+      - './output:/tmp'
