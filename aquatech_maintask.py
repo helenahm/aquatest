@@ -66,5 +66,5 @@ def run_calculations(path_to_sensors, path_to_records):
 
 df = run_calculations('./sensors.csv', './records.csv')
 df.to_csv('/tmp/maintask_results.csv', header = ['sensor_addr', 'totals', 'leaks'], index=False)
-df[['sensor_addr', 'leaks']].to_csv('/tmp/totals.csv', header = ['sensor_addr', 'leaks'], index=False)
-df[['sensor_addr', 'totals']].to_csv('/tmp/leaks.csv', header = ['sensor_addr', 'totals'], index=False)
+df[['sensor_addr', 'leaks']].to_csv('/tmp/leaks.csv', header = ['sensor_addr', 'leaks'], index=False)
+df[['sensor_addr', 'totals']].to_csv('/tmp/totals.csv', header = ['sensor_addr', 'totals'], index=False)
