@@ -94,9 +94,9 @@ def add_data_from_records(tree_dict, path_to_records):
             tree_dict[transmitter_addr].add_data(value)
 ```
 
-That allows to easily see how much data went through children nodes and compare it to the papernt data to calculate the leaks.
+That allows to easily see how much data went through children nodes and compare it to the parent data to calculate the leaks.
 
-To resolve bonus a groupby by timestamp allows to use the very same logic that is used for the main task. Like that the per day counts are calculated.
+To resolve bonus a *groupby by timestamp* allows to use the very same logic that is used for the main task. Like that the per day counts are calculated.
 
 
 
