@@ -41,6 +41,10 @@ python -m unittest aquatests.py
 python -m unittest aquatests_bonus.py
 ```
 
+#### Expected Output:
+- main task: csv with data
+- bonus task: leaks_per_day_plot.pdf - leaks per day plot
+
 ### General idea:
 
 I decided to go with *pandas* for the main task and for *pandas* and *pandarell* for the bonus task. Why? I do not think there is enough data to justify using BigData tech. It was possible to go for Spark, Hive or pure MapReduce. Yet, pandas worked well, and the parallelisation of tasks that pandarell gives was a good choice for time/effort. It is also easy to get some plots from pandas series, that was an additional plus in the favour of pandas.
