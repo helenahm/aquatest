@@ -9,7 +9,7 @@
 #### Data:
 in the DB folder
 
-Result folder (mounted to Docker):
+#### Result folder (mounted to Docker):
 output
 
 #### Tests:
