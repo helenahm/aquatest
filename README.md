@@ -29,13 +29,17 @@ output
 ### Running the code:
 
 #### Main code:
+```
 docker-compose bulid
 docker-compose up
 docker-compose down
+```
 
 #### Tests:
+```
 python -m unittest aquatests.py
 python -m unittest aquatests_bonus.py
+```
 
 ### General idea:
 
