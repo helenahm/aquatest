@@ -47,9 +47,7 @@ python -m unittest aquatests_bonus.py
 
 ### General idea:
 
-I decided to go with *pandas* for the main task and for *pandas* and *pandarell* for the bonus task. Why? I do not think there is enough data to justify using BigData tech. It was possible to go for Spark, Hive or pure MapReduce. Yet, pandas worked well, and the parallelisation of tasks that pandarell gives was a good choice for time/effort. It is also easy to get some plots from pandas series, that was an additional plus in the favour of pandas.
-
-Tests were done with unittest using the data provided in the task description.
+I decided to go with **pandas** for the main task and for **pandas** and **pandarell** for the bonus task. Why? I do not think there is enough data to justify using BigData tech. It was possible to go for Spark, Hive or pure MapReduce. Yet, pandas worked well, and the parallelisation of tasks that pandarell gives was a good choice for time/effort. It is also easy to get some plots from pandas series, that was an additional plus in the favour of pandas.
 
 In both cases the main class that stores the data is TreeDictNode:
 
@@ -67,7 +65,7 @@ class TreeDictNode:
         self.data += data
 ```
 
-*read_sensor_data* function creates a node for each sensor
+**read_sensor_data** function creates a node for each sensor
 ```
 def read_sensor_data(path_to_data):
     tree_dict = {}
@@ -85,7 +83,7 @@ def read_sensor_data(path_to_data):
     return tree_dict
 ```
 
-*add_data_from_records* function fills the nodes with data
+**add_data_from_records** function fills the nodes with data
 ```
 def add_data_from_records(tree_dict, path_to_records):
     with open(path_to_records, newline='') as csvfile:
@@ -102,6 +100,9 @@ That allows to easily see how much data went through children nodes and compare 
 
 To resolve bonus a *groupby by timestamp* allows to use the very same logic that is used for the main task. Like that the per day counts are calculated.
 
+### Tests:
+
+Tests were done with **unittest** and **pandas.testing** using the data provided in the task description.
 
 
 
