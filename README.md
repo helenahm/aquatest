@@ -23,8 +23,8 @@ output
 - results3.csv
 
 #### Deployment:
-Dockerfile 
-docker-compose.yaml
+- Dockerfile 
+- docker-compose.yaml
 
 ### Running the code:
 
