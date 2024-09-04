@@ -7,10 +7,10 @@
 - aquatech_bonus.py - the solution for the bonus - per day leaks
 
 #### Data:
-in the DB folder
+- in the DB folder
 
 #### Result folder (mounted to Docker):
-output
+- output
 
 #### Tests:
 
