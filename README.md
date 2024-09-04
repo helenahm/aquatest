@@ -53,7 +53,9 @@ I decided to go with **pandas** for the main task and for **pandas** and **panda
 
 J'ai décidé d'opter pour **pandas** pour la tâche principale et pour **pandas** et **pandarell** pour la tâche bonus. Pourquoi? Je ne pense pas qu'il y ait suffisamment de données pour justifier l'utilisation de la technologie BigData. Il était possible d'opter pour Spark, Hive ou MapReduce pur. Pourtant, les pandas ont bien fonctionné et la parallélisation des tâches proposée par Pandarell était un bon choix en termes de temps et d'efforts. Il est également facile d'obtenir des intrigues de la série des pandas, ce qui était un avantage supplémentaire en faveur des pandas.
 
-In both cases the main class that stores the data is TreeDictNode: / Dans les deux cas, la classe principale qui stocke les données est TreeDictNode:
+In both cases the main class that stores the data is TreeDictNode:
+
+Dans les deux cas, la classe principale qui stocke les données est TreeDictNode:
 
 ```
 class TreeDictNode:
